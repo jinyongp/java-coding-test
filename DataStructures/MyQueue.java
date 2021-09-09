@@ -3,22 +3,22 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class MyQueue<T> {
-  private ArrayList<T> _queue = new ArrayList<T>();
+  private ArrayList<T> queue = new ArrayList<T>();
 
   public void enqueue(T item) {
-    _queue.add(item);
+    queue.add(item);
   }
 
   public T dequeue() {
-    return _queue.isEmpty() ? null : _queue.remove(0);
+    return queue.isEmpty() ? null : queue.remove(0);
   }
 
   public boolean isEmpty() {
-    return _queue.isEmpty();
+    return queue.isEmpty();
   }
 
   public String toString() {
-    return _queue.toString();
+    return queue.toString();
   }
 
   public static void main(String[] args) {
@@ -38,17 +38,17 @@ public class MyQueue<T> {
     System.out.println(queue);
 
     // 직접 정의한 Queue 클래스
-    MyQueue<Integer> my_queue = new MyQueue<Integer>();
+    MyQueue<Integer> myQueue = new MyQueue<Integer>();
 
-    my_queue.enqueue(1);
-    my_queue.enqueue(2);
-    my_queue.enqueue(3);
+    myQueue.enqueue(1);
+    myQueue.enqueue(2);
+    myQueue.enqueue(3);
 
-    System.out.println(my_queue); // [1, 2, 3]
+    System.out.println(myQueue); // [1, 2, 3]
 
-    System.out.println(my_queue.dequeue()); // 1
-    System.out.println(my_queue.dequeue()); // 2
-    System.out.println(my_queue.dequeue()); // 3
-    System.out.println(my_queue.dequeue()); // null
+    System.out.println(myQueue.dequeue()); // 1
+    System.out.println(myQueue.dequeue()); // 2
+    System.out.println(myQueue.dequeue()); // 3
+    System.out.println(myQueue.dequeue()); // null
   }
 }
